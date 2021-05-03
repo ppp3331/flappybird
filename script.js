@@ -48,7 +48,7 @@ setInterval(function(){
     {
         gameend=true;
         gamestart=false;
-        alert("game end");
+        alert("Game End!\nYour score:"+score);
         fbird.style.top=200+"px";
         jumping=true;
         document.getElementById("p").innerHTML="Click to Start!";

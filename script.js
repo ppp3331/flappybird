@@ -41,8 +41,7 @@ setInterval(function(){
     {
         fbird.style.top = (top+2)+"px";
     }
-    let left =parseInt(window.getComputedStyle(uppipe).getPropertyValue("left"));
-    let left2 =parseInt(window.getComputedStyle(downpipe).getPropertyValue("left"));
+   
     if(gameend==false){
     if (collapse()==true)
     {
@@ -68,11 +67,11 @@ function collapse()
     {
         return true;
     }
-    else if (left<=250&&left>=150&&top<=up)
+    else if (left<=250&&left>=130&&top<=up)
     {
         return true;
     }
-    else if ((left<=250&&left>=150&&(top+40)>=500-down))
+    else if ((left<=250&&left>=130&&(top+40)>=500-down))
     {
         return true;
     }

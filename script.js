@@ -98,9 +98,12 @@ function pass()
     
 }
 setInterval(function(){
+    if (gamestart==true)
+    {
     if (pass()==true)
     {
         score++;
         document.getElementById("score").innerHTML=score;
     }
+}
 },200);

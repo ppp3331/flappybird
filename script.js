@@ -3,7 +3,7 @@ var down=document.getElementById("downpipe");
 var fbird= document.getElementById("bird");
 var jumping=true;
 var gamestart=false;
-var gameend=false;
+var gameend=true;
 var score=0;
 if (gamestart==false)
 {

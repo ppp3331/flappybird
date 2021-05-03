@@ -1,0 +1,71 @@
+
+.game
+{
+    margin:auto;
+    overflow:hidden;
+    border:1px solid black;
+    width:800px;
+    height:500px;
+    background-image:url(sky.png);  
+    position:absolute;
+    z-index:-1;
+    
+}
+#uppipe
+{
+    left:710px;
+    width:100px;
+    background-color: green;
+    height:170px;
+    position:absolute;
+    z-index:1;
+    animation:moveleft 2s infinite linear;
+}
+
+@keyframes moveleft {
+    0%{left:710px}
+    100%{left:0px;
+    overflow:hidden;}
+    
+}
+#downpipe
+{
+    left:710px;
+    width: 100px;
+    height:170px;
+    bottom:0px;
+    position:absolute;
+    z-index:2;
+    background-color:green;
+    animation:moveleft 2s infinite linear;
+}
+#bird
+{
+    width:60px;
+    height:40px;
+    position:absolute;
+    top:200px;
+    left:200px;
+    background-image:url(bird.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+p
+{
+    font-size:50;
+    position:relative;
+    top:200px;
+    left:250px;
+
+}
+#score{
+    position:absolute;
+    right:5px;
+    font-size:30;
+}
+#S
+{
+    position:absolute;
+    right:50px;
+    font-size:30;
+}

@@ -47,8 +47,9 @@ setInterval(function(){
     {
         gameend=true;
         gamestart=false;
-        alert("Game End!\nYour score:"+score);
-        fbird.style.top=200+"px";
+        setTimeout(function(){alert("Game End!\nYour score:"+score);
+        fbird.style.top=200+"px";},15);
+        
         jumping=true;
         document.getElementById("p").innerHTML="Click to Start!";
         score=0;

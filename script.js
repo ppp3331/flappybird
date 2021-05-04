@@ -48,12 +48,12 @@ setInterval(function(){
         gameend=true;
         gamestart=false;
         setTimeout(function(){alert("Game End!\nYour score:"+score);
-        fbird.style.top=200+"px";},15);
-        
+        fbird.style.top=200+"px";
+        score=0;
+        document.getElementById("score").innerHTML=score;},15);
         jumping=true;
         document.getElementById("p").innerHTML="Click to Start!";
-        score=0;
-        document.getElementById("score").innerHTML=score;
+        
     }
 }},10);
 

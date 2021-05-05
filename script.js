@@ -5,6 +5,8 @@ var jumping=true;
 var gamestart=false;
 var gameend=true;
 var score=0;
+
+//gets rid of "click to start" message
 if (gamestart==false)
 {
     document.addEventListener("click",()=> {
@@ -13,6 +15,8 @@ if (gamestart==false)
     gameend=false;
 });
 }
+
+//generates random pipes
 document.addEventListener("click", jump);
 up.addEventListener('animationiteration', ()=> {
     let random= ((Math.random()*300)+20);
@@ -21,6 +25,7 @@ up.addEventListener('animationiteration', ()=> {
     uppipe.style.height= random + "px";
 });
 
+//makes the bird jump
 function jump(){
     let top = parseInt(window.getComputedStyle(bird).getPropertyValue("top"));
     if (top>0)
@@ -35,6 +40,7 @@ function jump(){
     
 }
 
+//makes the bird fall, checks if game end
 setInterval(function(){
     let top =parseInt(window.getComputedStyle(bird).getPropertyValue("top"));
     if (jumping==false)
@@ -57,7 +63,7 @@ setInterval(function(){
     }
 }},10);
 
-
+//checks if the bird hits the pipe
 function collapse()
 {
     let top =parseInt(window.getComputedStyle(bird).getPropertyValue("top"));
@@ -82,13 +88,14 @@ function collapse()
     }
 }
 
+//check if the bird pass the pipes
 function pass()
 {   
     let top =parseInt(window.getComputedStyle(bird).getPropertyValue("top"));
     let up =parseInt(window.getComputedStyle(uppipe).getPropertyValue("height"));
     let down =parseInt(window.getComputedStyle(downpipe).getPropertyValue("height"));
     let left =parseInt(window.getComputedStyle(uppipe).getPropertyValue("left"));
-    if ((left<=250&&left>=150&&top>up)&&(left<=250&&left>=150&&(top+40)<500-down))
+    if ((left<=250&&left>=130&&top>up)&&(left<=250&&left>=130&&(top+40)<500-down))
     {
         return true;
     }
@@ -97,6 +104,8 @@ function pass()
     }
     
 }
+
+//calculates score
 setInterval(function(){
     if (gamestart==true)
     {
